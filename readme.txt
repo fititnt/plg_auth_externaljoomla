@@ -16,6 +16,8 @@ GNU General Public License version 3. See license.txt
 
 -------------------------------------- Todo ------------------------------------
 
+- Make it work via cURL and avoid change external site
+- Make it work with comnination with one system plugin on external site
 
 ----------------------------------- Changelog ----------------------------------
 

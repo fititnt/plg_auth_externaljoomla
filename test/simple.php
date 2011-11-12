@@ -10,7 +10,7 @@ include_once '../libraries/WebDig/WebDig.php';
 
 $wd = new WebDig(); 
 echo $wd->setDebug('plg_auth_joomlaexternal.log', TRUE)
-    ->setTarget('http://fititnt.dev/bancada30/index.php?option=com_users&view=login')
+    ->setTarget('http://fititnt.dev/bancada30/index.php?option=com_users&tmpl=component&view=login')
     //->setTarget('http://fititnt.dev/bancada31/plugins/authentication/externaljoomla/test/dump-vars.php')
     ->setCookie()
     ->post( array(
@@ -18,5 +18,6 @@ echo $wd->setDebug('plg_auth_joomlaexternal.log', TRUE)
             'password' => 'test'
              )
            )
+    ->setTarget('http://fititnt.dev/bancada30/index.php?option=com_users&tmpl=component&view=profile')->dig()
     ->get('content');
 $wd->debug();
